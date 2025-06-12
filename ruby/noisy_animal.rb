@@ -12,18 +12,18 @@ class NoisyAnimal
       make_bird_noise(false)
     end
     if loud
-      if mammal_noise
-        2.times { puts mammal_noise }
+      if animal_noise
+        2.times { puts animal_noise }
       end
       make_bird_noise(true) if is_bird
     elsif %w[cat dog leopard].include?(species)
-      puts mammal_noise
+      puts animal_noise
     end
   end
 
   private
 
-  def mammal_noise
+  def animal_noise
     {
       'cat' => 'meow',
       'dog' => 'woof',
